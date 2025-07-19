@@ -25,11 +25,11 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 #### Desktop
 
-![Desktop Screenshot](./solution-screenshots/screenshot-desktop.png)
+![Desktop Screenshot](https://github.com/omargabrsw/recipe-page/blob/main/solution-screenshots/Desktop.png)
 
 #### Mobile
 
-![Mobile Screenshot](./solution-screenshots/screenshot-mobile.png)
+![Mobile Screenshot](https://github.com/omargabrsw/recipe-page/blob/main/solution-screenshots/Mobile.png)
 
 ### Links
 
