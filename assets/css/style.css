@@ -8,7 +8,7 @@
 @font-face {
   font-family: "Outfit";
   src: url(../fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
-  font-weight: 400 600 700;
+  font-weight: 400 700; /* Fixed range */
 }
 /* End of fonts */
 /* Start of CSS Variables  */
@@ -66,16 +66,22 @@ ul {
 /* Start of Page Content */
 .page-content {
   padding: var(--responsive-padding);
-  max-width: 650px;
+  max-width: 40.625rem; /* 650px -> 40.625rem */
   width: fit-content;
-  min-width: 375px;
-  margin: 50px auto;
+  min-width: 23.438rem; /* 375px -> 23.438rem */
+  margin: 3.125rem auto; /* 50px -> 3.125rem */
   background-color: var(--White);
-  border-radius: clamp(0px, -7.0423rem + 30.0469vw, 20px);
+  border-radius: clamp(
+    0rem,
+    -7.0423rem + 30.0469vw,
+    1.25rem
+  ); /* 20px -> 1.25rem */
 }
 .section {
-  padding-left: calc(30px - var(--responsive-padding));
-  padding-right: calc(30px - var(--responsive-padding));
+  padding-inline-start: calc(
+    1.875rem - var(--responsive-padding)
+  ); /* 30px -> 1.875rem */
+  padding-inline-end: calc(1.875rem - var(--responsive-padding));
   margin: 0 auto;
 }
 
@@ -108,7 +114,7 @@ ul {
   display: flex;
   flex-direction: column;
   list-style: disc;
-  padding-left: 20px;
+  padding-inline-start: 20px;
   font-size: var(--paragraph-size);
   font-family: var(--Outfit);
   font-weight: var(--Outfit-Weight-400);
@@ -133,12 +139,12 @@ strong {
   display: flex;
   flex-direction: column;
   list-style: disc;
-  padding-inline-start: 20px;
+  padding-inline-start: 1.25rem; /* 20px -> 1.25rem */
   font-size: var(--paragraph-size);
   font-family: var(--Outfit);
   font-weight: var(--Outfit-Weight-400);
   color: var(--Stone-600);
-  row-gap: 10px;
+  row-gap: 0.625rem; /* 10px -> 0.625rem */
 }
 .ingredients-list li::marker {
   color: var(--Brown-800);
@@ -153,12 +159,12 @@ strong {
   display: flex;
   flex-direction: column;
   list-style: decimal;
-  padding-left: 20px;
+  padding-inline-start: 1.25rem; /* 20px -> 1.25rem */
   font-size: var(--paragraph-size);
   font-family: var(--Outfit);
   font-weight: var(--Outfit-Weight-400);
   color: var(--Stone-600);
-  row-gap: 10px;
+  row-gap: 0.625rem; /* 10px -> 0.625rem */
 }
 .instructions-list li::marker {
   color: var(--Brown-800);
@@ -178,7 +184,7 @@ strong {
   border-bottom: solid 1px var(--Stone-150);
 }
 .nutrition-table td {
-  padding: 10px 30px;
+  padding: 0.625rem 1.875rem; /* 10px 30px -> 0.625rem 1.875rem */
   text-align: left;
 }
 .nutrition-value {
