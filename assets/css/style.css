@@ -29,6 +29,8 @@
   --Outfit-Weight-600: 600;
   --Outfit-Weight-700: 700;
   --responsive-padding: clamp(0px, -10.5634rem + 45.0704vw, 30px);
+  --link-color: hsl(228, 45%, 44%);
+  --section-padding-end: clamp(0.5rem, 2vw, 1.25rem); /* replaces 20px */
 }
 /* End of CSS Variables */
 /* Start of Global Rules */
@@ -55,7 +57,7 @@ h6 {
 h1 {
   font-family: var(--Young-Serif);
   font-weight: var(--Young-Serif-Weight-400);
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2vw, 2rem); /* responsive font size */
   color: var(--Stone-900);
 }
 
@@ -88,7 +90,9 @@ ul {
 .ingredients-content,
 .instructions-content {
   border-bottom: solid 1px var(--Stone-150);
-  padding-bottom: 20px;
+  padding-block-end: var(
+    --section-padding-end
+  ); /* logical property + relative unit */
 }
 .recipe-image img {
   border-radius: clamp(0px, -3.5211rem + 15.0235vw, 10px);
@@ -97,29 +101,29 @@ ul {
 }
 
 .recipe-meta {
-  padding: 10px 30px;
+  padding: 0.625rem 1.875rem; /* 10px 30px -> 0.625rem 1.875rem */
   background-color: var(--Rose-50);
-  border-radius: 10px;
-  margin-top: 10px;
+  border-radius: 0.625rem; /* 10px -> 0.625rem */
+  margin-top: 0.625rem; /* 10px -> 0.625rem */
 }
 .preparation-title {
   font-size: 1.5rem;
   font-family: var(--Outfit);
   font-weight: var(--Outfit-Weight-600);
   color: var(--Rose-800);
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem; /* 10px -> 0.625rem */
 }
 
 .preparation-info {
   display: flex;
   flex-direction: column;
   list-style: disc;
-  padding-inline-start: 20px;
+  padding-inline-start: 1.25rem; /* 20px -> 1.25rem */
   font-size: var(--paragraph-size);
   font-family: var(--Outfit);
   font-weight: var(--Outfit-Weight-400);
   color: var(--Stone-600);
-  row-gap: 10px;
+  row-gap: 0.625rem; /* 10px -> 0.625rem */
 }
 
 .preparation-info li::marker {
@@ -132,7 +136,7 @@ strong {
   font-weight: var(--Outfit-Weight-700);
 }
 .list-row {
-  margin-inline-start: 25px;
+  margin-inline-start: 1.563rem; /* 25px -> 1.563rem */
 }
 
 .ingredients-list {
@@ -152,7 +156,7 @@ strong {
 
 .ingredients-list .list-row,
 .instructions-list .list-row {
-  margin-inline-start: 10px;
+  margin-inline-start: 0.625rem; /* 10px -> 0.625rem */
 }
 
 .instructions-list {
@@ -173,8 +177,8 @@ strong {
 .nutrition-table {
   width: 100%;
   border-collapse: collapse;
-  border-spacing: 0 10px;
-  margin-top: 20px;
+  border-spacing: 0 0.625rem; /* 10px -> 0.625rem */
+  margin-top: 1.25rem; /* 20px -> 1.25rem */
   font-size: var(--paragraph-size);
   font-family: var(--Outfit);
   font-weight: var(--Outfit-Weight-400);
@@ -197,9 +201,9 @@ strong {
   font-size: var(--paragraph-size);
   font-family: var(--Outfit);
   text-align: center;
-  margin: 10px;
+  margin: 0.625rem; /* 10px -> 0.625rem */
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--link-color); /* use variable */
 }
 /* End of footer  */
