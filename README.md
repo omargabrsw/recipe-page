@@ -61,3 +61,4 @@ I want to finish learning JavaScript so I can start working with frameworks like
 ## Acknowledgments
 
 Thanks to the Frontend Mentor team for providing great project ideas and a platform to review my work and
+help me to improve.
